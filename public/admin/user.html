@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>用户管理</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<!-- 左侧边栏 -->
+<div class="lt_aside">
+  <!--brand: 品牌  -->
+  <div class="brand">
+    <a href="index.html" >我的首页</a>
+  </div>
+  <!--用户信息  -->
+  <div class="user">
+    <img src="images/default.png" alt="用户头像">
+    <p>超级管理员</p>
+  </div>
+  <!--导航nav区域  -->
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="javascript:;" class="now">
+          <span class="glyphicon glyphicon-user"></span>
+          <span>用户管理</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <span class="glyphicon glyphicon-list"></span>
+          <span>分类管理</span>
+
+        </a>
+        <div class="child" style="display:none">
+          <a href="first.html">一级分类</a>
+          <a href="second.html">二级分类</a>
+        </div>
+        
+      </li>
+      <li>
+        <a href="product.html">
+          <span class="glyphicon glyphicon-tags"></span>
+          <span>商品管理</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!--右侧区域  -->
+<div class="lt_main">
+  <!--头部: 有两个字体图标  -->
+  <div class="header ">
+    <a href="javascript:;"  class="pull-left ">
+      <span class="glyphicon glyphicon-align-justify icon_menu "></span></a>
+    <a href="javascript:;" class="pull-right" >
+      <span  class="glyphicon glyphicon-log-out icon_logout "></span></a>
+  </div>
+
+  
+  <div class="container-fluid">
+    <!--面包屑导航--即路径导航;  -->
+    <div>
+      <ol class="breadcrumb">
+        <li><a href="#">管理系统</a></li>
+        <!-- <li><a href="#"></a></li> -->
+        <!--选择一个li, 不可点击  -->
+        <li class="active">用户管理</li>
+      </ol>
+    </div>
+    <!--content内容区域  -->
+    <div class="content"></div>
+  </div>
+
+</div>
+
+
+<!-- 模态框 : bootstrap框架中的模态框-->
+<div class="modal fade " tabindex="-1" id="logoutModal">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        
+        <p class="text-danger">
+          <span class="glyphicon  glyphicon-info-sign"></span>
+          你确定要退出后台管理系统吗??
+          &hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary  btn_logout">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

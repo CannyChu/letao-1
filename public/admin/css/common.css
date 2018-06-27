@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+.body_bg{
+  background-color: #222d32;
+}
+
+.mt_150{
+  margin-top: 150px;
+}
+
+
+
+/* 必须有html和body的百分比高度 */
+html, 
+body {
+  /* width: 100%; */
+  height: 100%;
+}
+
+*{
+  padding:0;
+  margin: 0;
+  list-style: none;
+}
+
+a{
+   color: #fff; 
+  text-decoration: none;
+
+}
+a:link,
+a:visited,
+a:hover,
+a:active{
+  text-decoration: none;
+  
+}
+
+
+.lt_aside{
+  width: 180px;
+  height: 100%; 
+  background-color: #222d32;
+  position: absolute;
+  top:0;
+  left:0;
+  transition:all, 1s;
+
+}
+/* 一开始.now 类不生效, 之后加上, 切换类的效果; */
+.lt_aside.now{
+  left: -180px;
+}
+
+/*brand区域  */
+
+.lt_aside .brand a{
+  display: block;
+  width: 180px;
+  height: 50px;
+  background-color: #367fa9;
+  color: #fff;
+  font-size: 24px;
+  text-align:center;
+  line-height: 50px;
+}
+/*user区域  */
+
+.lt_aside .user img{
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  margin: 30px auto 0;
+}
+
+.lt_aside .user p{
+  color:#fff;
+  font-size: 16px;
+  text-align:center;
+  height:40px;
+  line-height: 40px;
+
+}
+
+/*ul li 导航: 让内容撑开盒子;单独设置a的样式  */
+.lt_aside .nav a {
+/*a标签是行内样式: 设置的宽高不起作用;  */
+/*只需要给a设置高度, 不用设置宽度;  */
+  display: block;
+  
+  height: 40px;
+  line-height: 40px;
+  
+  /* text-align: center; */
+
+  padding-left: 40px;
+  /*每个类都假加border-left属性: 透明色;  然后当前类改变颜色  */
+  border-left: 3px  solid transparent;
+
+}
+.lt_aside .nav a.now{
+  background-color: #1d1f21;
+  border-left: 3px  solid #367fa9;
+}
+
+
+.lt_aside .nav .child a{
+  padding-left: 60px;
+}
+
+/*右侧区域  */
+
+/*header部分  */
+
+.lt_main{
+  width:100%;
+  height: 100%;
+  /* background-color: green; */
+  
+  /*加margin-left,会出现左右滚动条; 所以不可以用margin-left;
+  加padding-left: 也可以实现同样的效果,给左侧的侧边栏留出180px宽度; 而且还不会出现滚动条;  */
+  /* margin-left:180px; */
+  padding-left: 180px;
+  transition: all, 1s;
+
+}
+
+.lt_main.now{
+  padding-left: 0px;
+}
+
+
+
+.lt_main .header{
+  height: 50px;
+  line-height: 50px;
+  background-color: #3c8dbc;
+  padding: 0 20px;
+  /*font-size: 可以被继承; color: 不可以被继承;  */
+
+  font-size:16px;
+  
+}
+
+.lt_main .breadcrumb  a{
+  color: #3c8dbc;
+}
+
+

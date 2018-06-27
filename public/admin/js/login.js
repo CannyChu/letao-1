@@ -47,7 +47,7 @@ $(function(){
   //2.表单校验成功的时候, 阻止表单的跳转, 使用ajax进行数据的提交;
 //成功的时候触发;
 $('form').on("success.form.bv", function(e){
-  e.prebentDefault();//阻止浏览器的默认跳转功能;
+  e.preventDefault();//阻止浏览器的默认跳转功能;
   
   
   //发送ajax请求, 不成功的时候, 不跳转页面;
@@ -171,7 +171,7 @@ $(function(){
           //登陆成功
           location.href = "user.html";
         }
-        console.log(res);
+        //console.log(res);
       }
     })
 
